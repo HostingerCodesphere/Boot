@@ -46,7 +46,7 @@ btn.addEventListener('click', () => {
 
 function takeCommand(message) {
     if (message.includes('hey') || message.includes('hello')) {
-        speak("Hello Sir, How May I Help You?");
+        speak("Hello,Saya Codesphere Ada yang bisa saya bantu?");
     } else if (message.includes("open google")) {
         window.open("https://google.com", "_blank");
         speak("Opening Google...");
