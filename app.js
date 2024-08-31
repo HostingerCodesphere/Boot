@@ -61,11 +61,11 @@ function takeCommand(message) {
         speak("Membuka Instagram...");
     } else if (message.includes('what is') || message.includes('who is') || message.includes('what are')) {
         window.open(`https://www.google.com/search?q=${message.replace(" ", "+")}`, "_blank");
-        const finalText = "This is what I found on the internet regarding " + message;
+        const finalText = "Ini adalah apa yang saya temukan di internet mengenai " + message;
         speak(finalText);
     } else if (message.includes('wikipedia')) {
         window.open(`https://en.wikipedia.org/wiki/${message.replace("wikipedia", "").trim()}`, "_blank");
-        const finalText = "This is what I found on Wikipedia regarding " + message;
+        const finalText = "Ini adalah apa yang saya temukan di Wikipedia mengenai " + message;
         speak(finalText);
     } else if (message.includes('jam berapa sekarang')) {
         const time = new Date().toLocaleString(undefined, { hour: "numeric", minute: "numeric" });
