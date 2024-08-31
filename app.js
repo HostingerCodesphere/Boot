@@ -16,7 +16,7 @@ function wishMe() {
     var hour = day.getHours();
 
     if (hour >= 0 && hour < 12) {
-        speak("Good Morning Boss...");
+        speak("Good Morning Bosskuuu...");
     } else if (hour >= 12 && hour < 17) {
         speak("Good Afternoon Master...");
     } else {
@@ -25,7 +25,7 @@ function wishMe() {
 }
 
 window.addEventListener('load', () => {
-    speak("Initializing JARVIS...");
+    speak("Initializing...");
     wishMe();
 });
 
@@ -46,16 +46,19 @@ btn.addEventListener('click', () => {
 
 function takeCommand(message) {
     if (message.includes('hey') || message.includes('hello')) {
-        speak("Hello,Saya Codesphere Ada yang bisa saya bantu?");
-    } else if (message.includes("open google")) {
+        speak("Hello,Ada Yang bisa saya bantu??");
+    } else if (message.includes("buka google")) {
         window.open("https://google.com", "_blank");
-        speak("Opening Google...");
-    } else if (message.includes("open youtube")) {
+        speak("Membuka Google...");
+    } else if (message.includes("buka youtube")) {
         window.open("https://youtube.com", "_blank");
-        speak("Opening Youtube...");
-    } else if (message.includes("open facebook")) {
+        speak("Membuka Youtube...");
+    } else if (message.includes("buka facebook")) {
         window.open("https://facebook.com", "_blank");
-        speak("Opening Facebook...");
+        speak("Membuka Facebook...");
+    } else if (message.includes("buka instagram")) {
+        window.open("https://instagram.com", "_blank");
+        speak("Membuka Instagram...");
     } else if (message.includes('what is') || message.includes('who is') || message.includes('what are')) {
         window.open(`https://www.google.com/search?q=${message.replace(" ", "+")}`, "_blank");
         const finalText = "This is what I found on the internet regarding " + message;
@@ -64,7 +67,7 @@ function takeCommand(message) {
         window.open(`https://en.wikipedia.org/wiki/${message.replace("wikipedia", "").trim()}`, "_blank");
         const finalText = "This is what I found on Wikipedia regarding " + message;
         speak(finalText);
-    } else if (message.includes('time')) {
+    } else if (message.includes('jam berapa sekarang')) {
         const time = new Date().toLocaleString(undefined, { hour: "numeric", minute: "numeric" });
         const finalText = "The current time is " + time;
         speak(finalText);
@@ -74,7 +77,7 @@ function takeCommand(message) {
         speak(finalText);
     } else if (message.includes('calculator')) {
         window.open('Calculator:///');
-        const finalText = "Opening Calculator";
+        const finalText = "Membuka Kalculator";
         speak(finalText);
     } else {
         window.open(`https://www.google.com/search?q=${message.replace(" ", "+")}`, "_blank");
