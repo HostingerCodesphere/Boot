@@ -81,7 +81,7 @@ function takeCommand(message) {
         speak(finalText);
     } else {
         window.open(`https://www.google.com/search?q=${message.replace(" ", "+")}`, "_blank");
-        const finalText = "I found some information for " + message + " on Google";
+        const finalText = " " + message + " ";
         speak(finalText);
     }
 }
