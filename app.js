@@ -45,7 +45,7 @@ btn.addEventListener('click', () => {
 });
 
 function takeCommand(message) {
-    if (message.includes('hey') || message.includes('hello')) {
+    if (message.includes('hai') || message.includes('hallo')) {
         speak("Hello,Ada Yang bisa saya bantu??");
     } else if (message.includes("buka google")) {
         window.open("https://google.com", "_blank");
